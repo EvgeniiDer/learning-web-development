@@ -1,0 +1,32 @@
+# Папки и файлы Visual Studio
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# Папки сборки
+[Bb]uild*/
+[Dd]ebug/
+[Rr]elease/
+x64/
+Win32/
+
+# Файлы, генерируемые Qt (MOC, UI, RCC)
+*_autogen/
+moc_*.cpp
+ui_*.h
+qrc_*.cpp
+
+# Скомпилированные файлы
+*.o
+*.obj
+*.lib
+*.dll
+*.exe
+*.ilk
+*.pdb
+
+# Другой мусор
+*.log
+*.tlog
+*.ninja_log
