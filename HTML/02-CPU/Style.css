@@ -1,0 +1,74 @@
+﻿
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: Roboto Condensed;
+    font-size: 24px;
+}
+p{
+    text-align: justify;
+}
+figure{
+    text-align: center;
+    font-style: italic;
+    font-size: 16px;
+}
+.processor-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+        }
+        
+.processor-table th, .processor-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+        }
+        
+.processor-table th {
+            background-color: #5F2580;
+            color: white;
+            position: sticky;
+            top: 0;
+        }
+        
+
+/*.processor-table tr:hover {
+            background-color: #e6f7ff;
+        }*/
+
+      
+.supported {
+            color: green;
+            font-weight: bold;
+        }
+        
+.unsupported {
+            color: #999;
+        }
+        
+.year {
+            font-weight: bold;
+            color: #2980b9;
+        }
+        
+ @media (max-width: 768px) {
+            .processor-table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+        body {
+                padding: 10px;
+            }
+        }/* Это Фишка относитья к телефонам пробывал на телефоне открыть таблицу были проблемы
+        нашел в интернете это решение*/
+        
+.note {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 30px;
+            text-align: center;
+        }      
