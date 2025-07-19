@@ -1,0 +1,97 @@
+
+/* style.css */
+
+/* Общие стили для страницы */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Центрируем калькулятор по горизонтали */
+    align-items: center;    /* Центрируем калькулятор по вертикали */
+    min-height: 100vh;      /* Занимаем всю высоту экрана */
+        background-image: url("img/backgound.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Контейнер всего калькулятора */
+.calculator {
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    background-color: #3a4655;
+    padding: 20px;
+}
+
+/* Дисплей калькулятора */
+.calculator-display {
+    width: 100%;
+    height: 70px;
+    background-color: #222;
+    color: white;
+    text-align: right;
+    font-size: 3em; /* Увеличиваем шрифт */
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Чтобы padding не влиял на ширину */
+}
+
+/* Сетка, в которой лежат все кнопки */
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки одинаковой ширины */
+    gap: 10px; /* Отступы между кнопками */
+}
+
+/* Стиль для всех кнопок */
+button {
+    height: 60px;
+    font-size: 1.5em;
+    border: none;
+    border-radius: 5px;
+    background-color: #555;
+    color: white;
+    cursor: pointer; /* Показывает, что на кнопку можно нажать */
+    transition: background-color 0.2s; /* Плавный эффект при наведении */
+}
+
+button:hover {
+    background-color: #666;
+}
+
+button:active {
+    background-color: #777;
+}
+
+/* Особые стили для кнопок-операторов */
+.key-operator {
+    background-color: #f39c12; /* Оранжевый */
+}
+.key-operator:hover {
+    background-color: #f5b041;
+}
+
+/* Стиль для кнопки сброса "AC" */
+.all-clear {
+    background-color: #e74c3c; /* Красный */
+}
+.all-clear:hover {
+    background-color: #ec7063;
+}
+
+/* Стиль для кнопки "равно" */
+.equal-sign {
+    background-color: #2ecc71; /* Зеленый */
+    /* Растягиваем кнопку на несколько рядов, чтобы она стала высокой */
+    grid-column: 4 / 5; /* Занимает 4-ю колонку */
+    grid-row: 2 / 6;    /* Занимает ряды со 2-го по 5-й */
+    height: auto;
+}
+.equal-sign:hover {
+    background-color: #58d68d;
+}
