@@ -16,8 +16,45 @@ body {
     background-attachment: fixed;
     min-height: 100vh;
 }
-
+.calculator-header{
+    display: flex;
+    background-color: #4a586a;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    align-items: center;
+    position: relative;
+    height: 10px;
+    box-sizing: border-box;
+}
+.header-button{ 
+    display: flex;
+}
+.header-button .btn{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 2px;
+}
+.header-button .red{
+    background-color: red;
+}
+.header-button .green{
+    background-color: green;
+}
+.header-button .yellow{
+    background-color: yellow;
+}
+.header-title{
+    color: #e0e0e0;
+    font-size:  1.1em;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
 /* Контейнер всего калькулятора */
+
 .calculator {
     width: 320px;
     border-radius: 10px;
