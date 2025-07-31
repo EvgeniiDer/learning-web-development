@@ -31,9 +31,9 @@ function startAnimation()
     i = 0;
     typeWriter(newQouteElement);
 }
-
+    startAnimation();
     setInterval(startAnimation, repeatDelay);
-    //startAnimation();
+    
     console.log(outputElement);
 }
 if(ENABLE_TIME)
