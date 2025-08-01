@@ -1,6 +1,6 @@
 "use strict"
-const ENABLE_SETTIMEOUT = true;//setTimeout() and setInterval()
-const ENABLE_TIME = false;
+const ENABLE_SETTIMEOUT = false;//setTimeout() and setInterval()
+const ENABLE_TIME = true;
 if(ENABLE_SETTIMEOUT)
 {
 const text = "To be, or not to be, than is the question....";
@@ -9,7 +9,7 @@ const delay = 50;
 const repeatDelay = 7000;
 let i = 0;
 
-const outputElement = document.getElementById("container");
+const outputElement = document.getElementById("output");
 
 function typeWriter(targetElement){
     if(i < text.length)
