@@ -1,0 +1,8 @@
+.hard_chess pre {
+    margin: 0;
+    padding: 0;
+    line-height: 0.61;
+    font-family: monospace;
+    font-size: 30px;
+    display: block;
+}
