@@ -5,11 +5,8 @@ function setupThemeSwitcher() {
 
     themeButton.addEventListener('click', function() {
         const seconds = parseFloat(themeInput.value);
-        if (isNaN(seconds) || seconds < 0) {
-            alert('Пожалуйста, введите корректное время в секундах (например, 3 или 5.5).');
-            return; 
-        }
-        bodyElement.style.transition = `background-color ${seconds}s, color ${seconds}s`;
+        const duration = (isNaN(seconds) || seconds < 0) ? 1 : seconds;
+        bodyElement.style.setProperty('--theme-transition-duration', `${duration}s`);
         bodyElement.classList.toggle('dark-mode');
     });
     const themeForm = document.getElementById('themeSwitcherForm');
