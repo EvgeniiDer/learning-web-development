@@ -1,0 +1,38 @@
+.collapsible-header {
+    cursor: pointer;
+    user-select: none; /* Чтобы текст не выделялся при клике */
+    position: relative;
+    padding-left: 20px; /* Место для иконки-стрелочки */
+}
+
+/* Рисуем стрелочку с помощью псевдо-элемента */
+.collapsible-header::before {
+    content: '▼'; /* Стрелка вниз (блок открыт) */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+/* Когда блок свернут, поворачиваем стрелочку */
+.collapsed .collapsible-header::before {
+    transform: translateY(-50%) rotate(-90deg); /* Стрелка вправо */
+}
+
+/* Стили для содержимого блока */
+.collapsible-content {
+    /* Хитрость для плавной анимации высоты */
+    max-height: 2000px; /* Задаем максимальную высоту с запасом */
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
+    padding: 10px 0;
+}
+
+/* Когда блок свернут - прячем содержимое */
+.collapsed .collapsible-content {
+    max-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}

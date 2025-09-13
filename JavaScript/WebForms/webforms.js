@@ -1,3 +1,15 @@
+function setupCollapsibleContainers() {
+    const containers = document.querySelectorAll('.collapsible-container');
+    containers.forEach(container => {
+        const header = container.querySelector('.collapsible-header');
+        if (header) {
+            header.addEventListener('click', () => {
+                container.classList.toggle('collapsed');
+            });
+        }
+    });
+}
+
 function setupThemeSwitcher() {
     const themeInput = document.getElementById('themeInput');
     const themeButton = document.getElementById('themeButton');
@@ -126,4 +138,5 @@ document.addEventListener('DOMContentLoaded', function() {
     setupMouseTracker();   
     setupTimeDisplay();
     setupThemeSwitcher();
+    setupCollapsibleContainers();
 });
