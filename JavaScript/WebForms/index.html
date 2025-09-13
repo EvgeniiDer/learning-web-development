@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru";>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WebForm</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="webforms.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <form id="themeSwitcherForm">
+                <h2>Smooth theme switcher</h2>
+                <p>Enter the transition time in seconds (e.g., 5) and click “Apply.”</p>
+        
+                <div class="form-group theme-switcher-group">
+                    <input type="number" id="themeInput" placeholder="Время в секундах...">
+                    <button type="button" id="themeButton">Применить</button>
+                </div>
+            </form>
+        </div>
+        <div class="container">
+            <h2>Mouse coordinates</h2>
+            <div class="mouse-tracker">
+                <p>
+                    The x-axis: <strong id="coordX">0</strong>
+                    The y-axis: <strong id="coordY">0</string>
+                </p>
+            </div>
+        </div>
+        <div class="container">
+            <form id="powerForm">
+                <h2>Raising a number to a power</h2>          
+                <div class="form-group">
+                    <label for="base">Основание степени</label>
+                    <input type="number" id="base" placeholder="Введите число">
+                </div>
+
+                <div class="form-group">
+                    <label for="exponent">Показатель степени</label>
+                    <input type="number" id="exponent" placeholder="Введите степень">
+                </div>
+
+                <p class="result-text">
+                    Степень: <strong id="powerResult">...</strong>
+                </p>
+                </form>
+        </div>
+        <div class="container"> 
+            <form id="registrationForm" novalidate>
+                <h2>Form Registration</h2>
+                <div class="form-group">
+                    <label for="username">User name</label>
+                    <input type="text" id="username" name="username" placeholder="Enter y name">
+                    <div class="error-message" id="usernameError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Date of Birth</label>
+                    <input type="date" id="birthdate" name="birthdate" placeholder="Select your birth date">
+                    <div class="error-message" id="usernameError"></div>
+                </div>
+
+                <div class="gender-group">
+                    <label>Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <div class="error-message" id="genderError"></div>
+                </div>
+
+                <div class="form-group">
+                    <label>What languages ​​do you know?</label>
+                    <div class="check-group">
+                        <input type="checkbox" id="lang-js" name="languages" value="JavaScript">
+                        <label for="lang-js">JavaScript</label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="lang-python" name="languages" value="Python">
+                        <label for="lang-python">Python</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="lang-java" name="languages" value="Java">
+                        <label for="lang-java">Java</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="lang-cpp" name="languages" value="C++">
+                        <label for="lang-cpp">C++</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="lang-php" name="languages" value="PHP">
+                        <label for="lang-php">PHP</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="lang-ruby" name="languages" value="Ruby">
+                        <label for="lang-ruby">Ruby</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="lang-go" name="languages" value="Go">
+                        <label for="lang-go">Go</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="lang-other" name="languages" value="Other">
+                        <label for="lang-other">Другой язык</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Form of university education:</label>
+                    <input type="radio" id="full-time" name="form-education" value="full-time" readonly>
+                    <label for="full-time">Full Time</label>
+                    <input type="radio" id="part-time" name="form-education" value="part-time" required>
+                    <label for="part-time">Part Time</label>
+                    <div class="error-message" id="educationError"></div>
+                </div>
+
+                <div class="form-group">
+                    <select id="speciality" name="speciality">
+                        <option value="" selected>-- Select a direction --</option>
+                        <!-- https://emojipedia.org/ -->
+                        <optgroup label="💻 Разработка">
+                            <option value="frontend">Frontend-developer</option>
+                            <option value="backend">Backend-developer</option>
+                            <option value="mobile">Mobile-developer</option>
+                        </optgroup>
+                        
+                        <optgroup label="🧪 Тестирование">
+                            <option value="qa-manual">Tester (Manual QA)</option>
+                            <option value="qa-auto">Tester (Automation QA)</option>
+                        </optgroup>
+                        
+                        <optgroup label="🖥️ Администрирование">
+                            <option value="sysadmin">System administrator</option>
+                            <option value="network">Network administrator</option>
+                            <option value="dba">Administrator БД</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <input type="file" id="file" name="file" accept=".pdf, .jpg, .png">
+                    <label for="file">Upload your file (Photo .pdf, .jpg, .png)</label>
+                    <div id="fileName" class="file-info"></div>
+                    <img id="imagePreview" class="image-preview" src="" alt="Preview image">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter y email">
+                <div class="error-message" id="emailError"></div>
+                </div>
+            
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter y password">
+                    <div class="error-message" id="passwordError"></div>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <div class="container">
+    <form id="timeDisplayForm">
+        <h2>Текущее время и дата</h2>
+        
+        <!-- Место для отображения времени -->
+        <div class="time-display">
+            <p>Время: <strong id="currentTime">--:--:--</strong></p>
+        </div>
+        
+        <!-- Контейнер для чекбоксов с отступом сверху (имитация пустых строк) -->
+        <div class="time-options">
+            <div class="checkbox-group">
+                <input type="checkbox" id="showDateCheckbox">
+                <label for="showDateCheckbox">Показать дату</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="showDayOfWeekCheckbox">
+                <label for="showDayOfWeekCheckbox">Показать день недели</label>
+            </div>
+        </div>
+
+        <!-- Контейнеры для даты и дня недели (изначально скрыты) -->
+        <div id="currentDateContainer" class="hidden">
+            <p>Date: <strong id="currentDate"></strong></p>
+        </div>
+        <div id="currentDayOfWeekContainer" class="hidden">
+            <p>Date of Week: <strong id="currentDayOfWeek"></strong></p>
+        </div>
+    </form>
+            <div id="successMessage" class="success-message"></div>
+        </div>
+    </body>
+</html>
